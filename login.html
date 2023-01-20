@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>登录界面</title>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <script src="jquery1.8.js"></script>
+    <script>
+        function reg() {
+            location.href = "reg.html";
+        }
+
+        function login() {
+
+            var zh = $("#zhanghao").val();
+            var mm = $("#mima").val();
+
+            if (zh == "") {
+                alert("账号不能为空");
+                return;
+            }
+
+            if (mm == "") {
+                alert("密码不能为空");
+                return;
+            }
+            if (zh == "admin" && mm == "admin") {
+                alert("登录成功");
+                location.href = "home.html"
+
+            }
+            else {
+                alert("账号或密码不正确")
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="out">
+        <div class="one">
+            <div class="text">工业4.0培训</div>
+            
+            <img src="图层 2.png" />
+        </div>
+        <div class="two">
+            <input id="zhanghao" type="text"  placeholder="请输入账号"/>
+        </div>
+        <div class="two">
+            <input id="mima" type="password" placeholder="请输入密码" />
+        </div>
+        <div class="three" onclick="login()">
+            登录
+        </div>
+        <div class="three" onclick="reg()">
+            注册
+        </div>
+    </div>
+</body>
+</html>
